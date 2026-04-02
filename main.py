@@ -25,6 +25,7 @@ from google.cloud import bigquery
 from google.oauth2 import service_account
 import requests
 import math
+from zoneinfo import ZoneInfo
 
 session = requests.Session()
 
