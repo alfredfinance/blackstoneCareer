@@ -215,10 +215,12 @@ for job_url in job_urls:
         location = ""
 
     experienceLevel = ""
-    scrappedDateTime = datetime.datetime.now().isoformat()
-    scrappedDate = datetime.datetime.now().strftime("%Y-%m-%d")
-    scrappedHour = datetime.datetime.now().strftime("%H")
-    scrappedMinutes = datetime.datetime.now().strftime("%M")
+
+    paris_now = datetime.datetime.now(ZoneInfo("Europe/Paris"))
+    scrappedDateTime    = paris_now.isoformat()
+    scrappedDate        = paris_now.strftime("%Y-%m-%d")
+    scrappedHour        = paris_now.strftime("%H")
+    scrappedMinutes     = paris_now.strftime("%M")
     
     # Append extracted data to list
     job_data.append({
